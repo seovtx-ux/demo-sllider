@@ -90,6 +90,21 @@
             100% { transform: scale(1); }
         }
 
+        @media (max-width: 768px) {
+            .inline-product-slider .slider-heading {
+                font-size: 15px;
+                padding: 10px 15px;
+                margin: -24px -20px 20px -20px;
+                gap: 8px;
+                line-height: 1.4;
+            }
+            .inline-product-slider .slider-heading svg {
+                width: 18px;
+                height: 18px;
+                flex-shrink: 0;
+            }
+        }
+
         /* Product Card Styling */
         .product-card {
             padding: 12px;
@@ -115,41 +130,50 @@
         }
         .product-title {
             font-size: 14px;
-            font-weight: normal;
-            margin: 10px 0 5px;
-            color: var(--text-main);
+            font-weight: 600;
+            line-height: 1.4;
+            margin: 10px 0 6px;
+            color: #1a1a1a;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
-            height: 40px; /* Force consistent height for 2 lines */
+            height: 39px; /* Force consistent height for 2 lines */
         }
         .product-pricing {
             margin-top: auto; /* Push to bottom */
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 6px;
         }
         .current-price {
-            display: block;
             color: var(--price-color);
-            font-weight: bold;
+            font-weight: 800;
             font-size: 16px;
         }
         .old-price {
-            display: inline-block;
-            color: var(--text-muted);
+            color: #9ca3af;
             text-decoration: line-through;
             font-size: 12px;
-            margin-top: 2px;
+            font-weight: 500;
         }
         .product-meta {
             font-size: 12px;
-            color: var(--text-muted);
-            margin-bottom: 5px;
+            color: #6b7280;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 6px;
         }
-        .rating { color: #f59e0b; font-weight: bold; }
+        .rating { 
+            color: #374151; 
+            font-weight: 700; 
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
 
         /* Detail Button and Badges */
         .btn-detail {
@@ -188,6 +212,13 @@
         /* Swiper customization */
         .swiper {
             padding-bottom: 30px; /* Space for pagination */
+        }
+        .swiper-slide {
+            height: auto;
+            display: flex;
+        }
+        .product-card {
+            width: 100%;
         }
         .swiper-button-next::after, .swiper-button-prev::after {
             font-size: 14px !important;
@@ -261,7 +292,12 @@
                         <img src="${p.img}" alt="${p.name}">
                         <h4 class="product-title">${p.name}</h4>
                         <div class="product-meta">
-                            <span class="rating">★ ${p.rating}</span> | <span class="sold">${p.sold}</span>
+                            <span class="rating">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                ${p.rating}
+                            </span> 
+                            <span style="color:#d1d5db">•</span> 
+                            <span class="sold">${p.sold}</span>
                         </div>
                         <div class="product-pricing">
                             <span class="current-price">${p.currentPrice}</span>
@@ -276,7 +312,7 @@
                 <div class="inline-product-slider">
                     <h3 class="slider-heading">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #d70018;"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
-                        SẢN PHẨM BÁN CHẠY
+                        CÓ GÌ HOT TRONG TOP SẢN PHẨM TUẦN NÀY
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #d70018;"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
                     </h3>
                     <div class="swiper productSwiper">
