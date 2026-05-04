@@ -53,28 +53,28 @@
         /* Inline Slider Container */
         .inline-product-slider {
             font-family: Arial, Helvetica, sans-serif;
-            margin: 30px 0;
-            padding: 24px 20px;
+            margin: 15px 0;
+            padding: 8px;
             background: linear-gradient(to bottom, #fff4e6, #ffffff);
             border: 2px solid var(--primary-color);
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(15, 76, 129, 0.08);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(15, 76, 129, 0.08);
         }
         .inline-product-slider .slider-heading {
-            font-size: 22px;
+            font-size: 16px;
             font-weight: 800;
             color: #fff;
             background: linear-gradient(90deg, #ff4d4f, #d70018);
-            margin: -24px -20px 25px -20px;
-            padding: 14px 20px;
+            margin: -8px -8px 10px -8px;
+            padding: 8px 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            gap: 12px;
+            gap: 8px;
             text-transform: uppercase;
-            border-radius: 9px 9px 0 0;
-            box-shadow: 0 4px 15px rgba(215, 0, 24, 0.2);
+            border-radius: 6px 6px 0 0;
+            box-shadow: 0 2px 8px rgba(215, 0, 24, 0.15);
             text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
         }
 
@@ -92,23 +92,23 @@
 
         @media (max-width: 768px) {
             .inline-product-slider .slider-heading {
-                font-size: 15px;
-                padding: 10px 15px;
-                margin: -24px -20px 20px -20px;
-                gap: 8px;
-                line-height: 1.4;
+                font-size: 14px;
+                padding: 6px 8px;
+                margin: -8px -8px 10px -8px;
+                gap: 4px;
+                line-height: 1.2;
             }
             .inline-product-slider .slider-heading svg {
-                width: 18px;
-                height: 18px;
+                width: 14px;
+                height: 14px;
                 flex-shrink: 0;
             }
         }
 
         /* Product Card Styling */
         .product-card {
-            padding: 12px;
-            border-radius: 8px;
+            padding: 8px;
+            border-radius: 6px;
             background: #fff;
             border: 1px solid var(--border-color); 
             transition: all 0.3s ease;
@@ -119,53 +119,53 @@
         }
         .product-card:hover {
             border-color: var(--price-color);
-            box-shadow: 0 8px 16px rgba(215, 0, 24, 0.12);
-            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(215, 0, 24, 0.12);
+            transform: translateY(-2px);
         }
         .product-card img {
             width: 100%;
             aspect-ratio: 1 / 1;
             object-fit: cover;
-            border-radius: 6px;
+            border-radius: 4px;
         }
         .product-title {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 600;
-            line-height: 1.4;
-            margin: 10px 0 6px;
+            line-height: 1.3;
+            margin: 6px 0 4px;
             color: #1a1a1a;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
             text-overflow: ellipsis;
-            height: 39px; /* Force consistent height for 2 lines */
+            height: 34px; /* Force consistent height for 2 lines */
         }
         .product-pricing {
             margin-top: auto; /* Push to bottom */
             display: flex;
             align-items: baseline;
             flex-wrap: wrap;
-            gap: 6px;
+            gap: 4px;
         }
         .current-price {
             color: var(--price-color);
             font-weight: 800;
-            font-size: 16px;
+            font-size: 14px;
         }
         .old-price {
             color: #9ca3af;
             text-decoration: line-through;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 500;
         }
         .product-meta {
-            font-size: 12px;
+            font-size: 11px;
             color: #6b7280;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 4px;
         }
         .rating { 
             color: #374151; 
@@ -175,43 +175,40 @@
             gap: 3px;
         }
 
-        /* Detail Button and Badges */
-        .btn-detail {
-            display: block;
-            width: 100%;
-            padding: 8px 0;
-            margin-top: 15px;
-            background-color: #fff;
-            color: var(--price-color);
-            border: 1px solid var(--price-color);
-            text-align: center;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 14px;
-            cursor: pointer;
-            transition: all 0.2s;
-            text-transform: uppercase;
-        }
-        .btn-detail:hover {
-            background-color: var(--price-color);
-            color: #fff;
-        }
+        /* Badges */
         .hot-badge {
             position: absolute;
-            top: 10px;
-            left: 10px;
+            top: 6px;
+            left: 6px;
             background: linear-gradient(135deg, #ff4d4f 0%, #d70018 100%);
             color: #fff;
-            padding: 4px 8px;
-            font-size: 11px;
+            padding: 2px 6px;
+            font-size: 10px;
             font-weight: bold;
-            border-radius: 4px;
+            border-radius: 3px;
             z-index: 10;
         }
 
         /* Swiper customization */
         .swiper {
-            padding-bottom: 30px; /* Space for pagination */
+            padding-bottom: 5px; /* Removed pagination space */
+        }
+        .btn-view-all {
+            display: inline-block;
+            background: #fff;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+            padding: 4px 16px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+        .btn-view-all:hover {
+            background: var(--primary-color);
+            color: #fff;
         }
         .swiper-slide {
             height: auto;
@@ -265,7 +262,7 @@
     const products = [
         { id: 1, name: "Thanh quản lý cáp mạng 19 inch 1U", currentPrice: "120.000đ", oldPrice: "150.000đ", rating: "4.8", sold: "1.2k đã bán", img: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=500&h=500&fit=crop" },
         { id: 2, name: "Thanh nguồn PDU 6 chấu đa năng, có MCB...", currentPrice: "350.000đ", oldPrice: "420.000đ", rating: "4.9", sold: "350 đã bán", img: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=500&fit=crop" },
-        { id: 3, name: "Patch Panel 24 Port Cat6 Commscope", currentPrice: "1.450.000đ", oldPrice: "1.800.000đ", rating: "5.0", sold: "1.2k+ đã bán", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&h=500&fit=crop" },
+        { id: 3, name: "Patch Panel 24 Port Cat6 Commscope", currentPrice: "LIÊN HỆ", oldPrice: "", rating: "5.0", sold: "1.2k+ đã bán", img: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&h=500&fit=crop" },
         { id: 4, name: "Khay tủ rack cố định D400 tĩnh tải 30kg", currentPrice: "250.000đ", oldPrice: "310.000đ", rating: "4.7", sold: "430 đã bán", img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=500&fit=crop" },
         { id: 5, name: "Bộ ốc cài tủ cáp quang (50 bộ)", currentPrice: "90.000đ", oldPrice: "110.000đ", rating: "4.9", sold: "5k+ đã bán", img: "https://images.unsplash.com/photo-1530982011887-3cc11cc85693?w=500&h=500&fit=crop" },
         { id: 6, name: "Quạt tản nhiệt tủ Rack 120x120mm 220V", currentPrice: "150.000đ", oldPrice: "180.000đ", rating: "4.8", sold: "800 đã bán", img: "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=500&h=500&fit=crop" }
@@ -303,7 +300,6 @@
                             <span class="current-price">${p.currentPrice}</span>
                             ${p.oldPrice ? `<span class="old-price">${p.oldPrice}</span>` : ''}
                         </div>
-                        <button class="btn-detail">Xem chi tiết</button>
                     </div>
                 </div>
             `).join('');
@@ -322,7 +318,9 @@
                         <!-- Navigation buttons -->
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
-                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div style="text-align: center; margin-top: 8px; margin-bottom: 2px;">
+                        <a href="#" class="btn-view-all">Xem tất cả <span>&rsaquo;</span></a>
                     </div>
                 </div>
             `;
@@ -335,11 +333,6 @@
                 slidesPerView: 2, // Mặc định Mobile hiển thị 2 sản phẩm/hàng
                 spaceBetween: 10,
                 loop: false,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                    dynamicBullets: true,
-                },
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
